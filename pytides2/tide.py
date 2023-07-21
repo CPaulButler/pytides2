@@ -1,4 +1,5 @@
-from collections import Iterable, OrderedDict
+from collections import OrderedDict
+from collections.abc import Iterable
 from itertools import count, takewhile
 
 try:
@@ -262,7 +263,7 @@ class Tide(object):
         partition = float(partition)
         relative = hours - hours[0]
         total_partitions = np.ceil(
-            relative[-1] / partition + 10 * np.finfo(np.float).eps
+            relative[-1] / partition + 10 * np.finfo(float).eps
         ).astype("int")
         return [
             hours[np.floor(np.divide(relative, partition)) == i]
