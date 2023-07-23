@@ -1,0 +1,3 @@
+pip install numpy==1.24 --force-reinstall
+sudo apt-get install python3-scipy
+sudo apt-get install libatlas-base-dev
